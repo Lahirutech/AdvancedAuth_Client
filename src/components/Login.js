@@ -22,7 +22,7 @@ export default function Login() {
   };
   const sendRequest = async () => {
     const res = await axios
-      .post("user/login", {
+      .post(`${process.env.REACT_APP_BACK_END_URL}/user/login`, {
         email: inputs.email,
         password: inputs.password,
       })

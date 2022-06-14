@@ -18,7 +18,7 @@ export default function Signup() {
       };
     const sendRequest = async () => {
         const res = await axios
-          .post("/user/signup/", { 
+          .post(`${process.env.REACT_APP_BACK_END_URL}/user/signup`, { 
             name: inputs.name,
             email: inputs.email, 
             password: inputs.password,
